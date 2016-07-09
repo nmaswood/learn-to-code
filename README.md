@@ -5,6 +5,8 @@ In order to run a program, first pick an exercise. Then
 
 `cd ex{exercise number here}`
 
+`cd app`
+
 In order to enter the folder.
 
 Once you are in the folder start a local webserver by running
