@@ -10,8 +10,8 @@
 *
 
 #### Math
-* type ` (1 + 1) * 10`
-* type 1 + 1 * 10
+* type `(1 + 1) * 10`
+* type `1 + 1 * 10`
 
 __Was the answer the same? What happened?__
 
