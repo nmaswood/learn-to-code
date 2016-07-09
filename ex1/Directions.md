@@ -7,7 +7,6 @@
 * You will see a menu of words starting with `Elements`, `Console`, ... `Security`
 * Click on `Console`
 * Click on the `>` that appears so that you can start typing
-*
 
 #### Math
 * type `(1 + 1) * 10`
