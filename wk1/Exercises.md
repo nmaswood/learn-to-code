@@ -1,7 +1,6 @@
 # Let's Get Started
 
-
-#### Setup 
+#### Setup
 
 * Right click anywhere in your browser. At the bottom of the menu that appears click `inspect`.
 * You will see a menu of words starting with `Elements`, `Console`, ... `Security`
