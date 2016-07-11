@@ -51,7 +51,7 @@
 
 ##### Printing
 * type `var greetings = [formal, regular, casual];`
-* type `for (var i = 0; i < greeting.length; i = 1 + i) {console.log(i);}`
+* type `for (var i = 0; i < greetings.length; i = 1 + i) {console.log(greetings[i]);}`
 * What happened?
 
 ##### If
