@@ -1,21 +1,6 @@
 # Learn to Code
 
-### Setup
-In order to run a program, first pick an exercise. Then 
 
-`cd ex{exercise number here}`
-
-`cd jumbotron`
-
-In order to enter the folder.
-
-Once you are in the folder start a local webserver by running
-
-`python -m SimpleHTTPServer`
-
-Then navigate in your browser to 
-
-`localhost:8000`
 ### Syllabus and Goals
 
 ##### Week 1
