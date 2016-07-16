@@ -44,14 +44,14 @@
 
 ##### Printing
 * type `var formal  = "Good day, Sir and Madam.`
-* type `var regular = "Hi, How are you?"
-* type `var casual  = "What's up?"
+* type `var regular = "Hi, How are you?"`
+* type `var casual  = "What's up?"`
 * Assign `"Sup Bro! Whats Crackalackin?"` what should you name it?
 * type `console.log(ANY GREETING OF YOUR CHOICE)` into the console. What happened?
 
 ##### Printing
 * type `var greetings = [formal, regular, casual];`
-* type `for (var i = 0; i < 10; i = 1 + i) {console.log(i);}`
+* type `for (var i = 0; i < greetings.length; i = 1 + i) {console.log(greetings[i]);}`
 * What happened?
 
 ##### If
