@@ -1,0 +1,58 @@
+<html lang="en">
+
+  <body>
+
+    <div class="header">
+      <h1>My name is</h1>
+      <h2>This is my website</h2>
+    </div>
+
+    <div class = "form">
+      <h3> Who is better?</h3>
+      <input type="text" id="thing1">
+      <input type="text" id="thing2">
+      <input type="submit" onclick = "submitData(1)">
+      <input type="submit" onclick = "submitData(2)">
+    </div>
+
+    <ul id="answers"></ul>
+
+    <script>
+function sayHello(){
+  alert("hello world");
+}
+
+function submitData(number){
+
+  var thing1 = document.getElementById("thing1");
+  var thing2 = document.getElementById("thing2");
+
+  var content1 = thing1.value
+    var content2 = thing1.value
+
+    if (content1 == "" || content2 == ""){
+      alert("PUT SOMETHING IN BOTH BOXES!!!!");
+      return;
+    }
+
+  thing1.value = "";
+  thing2.value = "";
+
+  var newItem = document.createElement("li");
+  var text;
+
+  if (number == 1){
+    text = document.createTextNode(content1);
+  } else {
+    text = document.createTextNode(content2);
+  }
+
+  var winners = document.getElementById("answers");
+  newItem.appendChild(text);
+  winners.appendChild(newItem);
+}
+    </script>
+
+
+  </body>
+</html>
