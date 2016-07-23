@@ -1,124 +1,136 @@
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-  <body>
-
-    <div class="header">
-      <h1>My name is</h1>
-      <h2>This is my website</h2>
-    </div>
-
-    <div class = "container">
-
-      <div id = "exercise1">
-        <div class = "exercise">
-          <div class = "exercise-title">
-          </div>
-          <div class = "exercise-body">
-            <div class = "exercise-input">
-            </div>
-            <button type = "submit" class = "submit-it">Submit</button>
-            <div class = "exercise-output">
-            </div>
-          </div>
-        </div>
+   <head>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="header">
+         <h1>Learn to Code!</h1>
       </div>
-
-      <div id = "exercise2">
-        <div class = "exercise">
-          <div class = "exercise-title">
-          </div>
-          <div class = "exercise-input">
-          </div>
-          <div class = "exercise-body">
-            <button type = "submit" class = "submit-it">Submit</button>
-            <div class = "exercise-output">
+      <div class = "container">
+         <div class = "exercise" id = "exercise1">
+            <div class = "exercise-title">
+               1. What do you have to say?
             </div>
-          </div>
-        </div>
+            <div class = "exercise-body">
+               <input type = "text" class = "exercise-input" placeholder = "Type anything" id= "input1"></>
+               <button type = "submit" class = "submit-button" onclick = "sayHello()">Submit</button>
+               <div class = "exercise-output" id="output1"></div>
+            </div>
+         </div>
+         <div class = "exercise" id = "exercise2">
+            <div class = "exercise-title">
+               2. What is your rapper name?
+            </div>
+            <div class = "exercise-body">
+               <input type = "text" class = "exercise-input" placeholder = "Type your name" id="input2"></>
+               <button type = "submit" class = "submit-button" onclick = "myRapperName()">Submit</button>
+               <div class = "exercise-output" id="output2"></div>
+            </div>
+         </div>
+         <div class = "exercise" id = "exercise3">
+            <div class = "exercise-title">
+               3. Who is better Kim or Taylor?
+            </div>
+            <div class = "exercise-body">
+               <select id = "select2" class = "exercise-input">
+                  <option value='nobody'>Nobody</option>
+                  <option value='Kim'>Kim</option>
+                  <option value='Taylor'>Taylor</option>
+               </select>
+               <button type = "submit" class = "submit-button" onclick="whoIsBetter()">Submit</button>
+               <div class = "exercise-output"></div>
+               <img src = "" alt = ""style="width:300px;height:230px;" class = "hide" id="img3">
+            </div>
+         </div>
       </div>
+      <script>
+         // Exercise 1
+         // Introduction functions
+         // These are fun simple examples to get started with
+         // This function says hello!
+         function sayHello() {
 
-      <div id = "exercise3">
-        <div class="exercise">
-          <div class = "exercise-title">
-          </div>
-          <div class = "exercise-body">
-            <div class = "exercise-input">
-            </div>
-            <button type = "submit" class = "submit-it">Submit</button>
-            <div class = "exercise-input">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
 
-    // Exercise 1
+             var inputbox = document.getElementById("input1");
 
-    // Introduction functions
-    // These are fun simple examples to get started with
+             var inputBoxValue = inputbox.value;
 
-    // This function says hello!
+             alert(inputBoxValue);
+         }
+         // myRapperName
+         // This function takes someone's name
+         // and turns them into a rapper
 
-    function sayHello(){
-      alert("hello world");
-    }
+         function myRapperName() {
 
-    // This function adds swag to any word!
+             var inputbox = document.getElementById("input2");
+             var name = inputbox.value;
 
-    function swagify(word){
-      alert(word + "swag");
-    }
+             if (name == "") return;
 
-    // This boring function adds 
-    // two numbers to one another
-    function addTogether(x,y){
-      alert( x + y);
-    }
 
-    // myRapperName
-    // This function takes someone's name
-    // and turns them into a rapper
+             var firstNames = ["MC", "DJ", "Young", "Little", "Big", "Small",
+                 "Big Money", "DollaBillz", "Money-in-the-bank", "Ace", "Bojangles",
+                 "SlamDunk", "Lay up", "Hard-in-the-paint", "BallsoHard", "DollazforDayz",
+                 "Chief", "Lil", "Biggie", "Captain", "Super-Duper-Uber", "Boss", "Fly-So-High",
+                 "Born-the-Best", "#BeastMode", "Never-Quit", "Born-to-Win", "Put-the-Team-on-my-Back",
+                 "Neva Quit", "Who-da-Best", "I-go-hard", "Rich Homie", "Better than Kendrick",
+                 "M-m-m-maybach Music", "FlyKicks", "Never-stop-going-in"
+             ]
 
-  function myRapperName(favoriteNumber, name){
+             var numberOfNames = firstNames.length;
+             var randomNumber = Math.round(Math.random() * 100);
+             var firstNameIndex = randomNumber % numberOfNames;
 
-    var firstNames = ["MC", "DJ", "Young", "Little", "Big", "Small",
-    "Big Money", "DollaBillz", "Money-in-the-bank", "Ace", "Bojangles",
-    "SlamDunk", "Lay up", "Hard-in-the-paint", "BallsoHard", "DollazforDayz",
-    "Chief", "Lil", "Biggie", "Captain", "Super-Duper-Uber", "Boss", "Fly-So-High",
-    "Born-the-Best", "#BeastMode", "Never-Quit", "Born-to-Win", "Put-the-Team-on-my-Back",
-    "Neva Quit", "Who-da-Best", "I-go-hard", "Rich Homie", "Better than Kendrick",
-    "M-m-m-maybach Music"]
+             var prefixName = firstNames[firstNameIndex];
 
-      var numberOfNames = firstNames.length
-      var randomNumber = Math.random() * 100
-      var firstNameIndex = randomNumber % numberOfNames
+             var outputDiv = document.getElementById("output2");
+             outputDiv.innerHTML = prefixName + ' ' + name;
 
-      var prefixName = firstNames[firstNameIndex];
+         }
 
-    return prefixName + name;
-  }
+         // Exercise 3
 
-  // Exercise 2
+         // Who is better Kim or Taylor?
 
-  // Change the color this function takes a color
-  // and changes the div text to that color
+         function whoIsBetter() {
 
-  function changeTheColor(color){
+             var kim = [
+                 "http://content.hollywire.com/sites/default/files/2015/03/18/1410156695_kim_kardashian_kanye_west_fight_racial_slur_ftr_48.jpg",
+                 "http://news.hiphopearly.com/wp-content/uploads/2015/06/Kanye-West-kim-Kardashian-baby-name.png",
+                 "http://api.ning.com/files/oncLOIv1tO7R*CC4knsheeOn4LgaF3LS76ZPQNrpKKmiiiuIcvG4uUVhhCy1N*kXQnJIpB83ufVrQu1CDiWIpizWWJ0HQYcr/kimandkanye.jpg",
+                 "http://www.billboard.com/files/styles/article_main_image/public/media/kanye-west-and-kim-kardashian-attend-the-lanvin-paris-march-2015-billboard-650.jpg"
+             ]
+             var taylor = [
+                 "http://img.wennermedia.com/620-width/taylor-swift-earrings-ace22232-50bf-4eda-adf7-aefae051c586.jpg",
+                 "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTc-Rs4RVMzlg-2zIqS341nWGlCOG0JAzx43Q0SVmsJ3a8_vpHv-A",
+                 "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQAhzjVt980DdmpAW2VvDmiO4drIK745pRhi1bqkXxnVFrIk2tH"
+             ]
 
-  }
 
-  // Exercise 3
+             var selectBox = document.getElementById("select2");
+             var name = selectBox.value;
 
-  // Who is better Kim or Taylor?
+             var randInt = Math.round(Math.random() * 100);
+             var pictureIdx = randInt % 3;
+             var url;
 
-  function whoIsBetter(){
+             var imgTag = document.getElementById("img3");
 
-  }
+             if (name == "Kim") {
+                 url = kim[pictureIdx];
+             } else if (name == "Taylor") {
+                 url = taylor[pictureIdx];
+             } else {
+                 imgTag.setAttribute("class", "hide");
+                 return;
+             }
 
-    </script>
-  </body>
+             imgTag.setAttribute("src", url);
+             imgTag.setAttribute("class", "");
+         }
+         
+      </script>
+   </body>
+   v
 </html>

@@ -1,0 +1,68 @@
+body {
+    width: 100%;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.header {
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 25px;
+    width:400;
+    color: #c0392b;
+}
+
+.container {
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+    border: 8px solid #c0392b;
+    padding: 10px;
+    margin : 10px;
+}
+
+.exercise {
+    width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.exercise-title {
+    padding-bottom: 20px;
+}
+
+.exercise-body {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-button {
+    width: 150px;
+}
+
+
+.exercise-input {
+    border: 1px solid #ccc;
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.exercise-outout {
+    margin-top: 20px;
+}
+
+.submit-it {
+}
+
+.hide {
+    display: none;
+}
+
+
+
+
