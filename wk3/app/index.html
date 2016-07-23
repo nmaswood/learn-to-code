@@ -1,4 +1,7 @@
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 
   <body>
 
@@ -7,52 +10,115 @@
       <h2>This is my website</h2>
     </div>
 
-    <div class = "form">
-      <h3> Who is better?</h3>
-      <input type="text" id="thing1">
-      <input type="text" id="thing2">
-      <input type="submit" onclick = "submitData(1)">
-      <input type="submit" onclick = "submitData(2)">
+    <div class = "container">
+
+      <div id = "exercise1">
+        <div class = "exercise">
+          <div class = "exercise-title">
+          </div>
+          <div class = "exercise-body">
+            <div class = "exercise-input">
+            </div>
+            <button type = "submit" class = "submit-it">Submit</button>
+            <div class = "exercise-output">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id = "exercise2">
+        <div class = "exercise">
+          <div class = "exercise-title">
+          </div>
+          <div class = "exercise-input">
+          </div>
+          <div class = "exercise-body">
+            <button type = "submit" class = "submit-it">Submit</button>
+            <div class = "exercise-output">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id = "exercise3">
+        <div class="exercise">
+          <div class = "exercise-title">
+          </div>
+          <div class = "exercise-body">
+            <div class = "exercise-input">
+            </div>
+            <button type = "submit" class = "submit-it">Submit</button>
+            <div class = "exercise-input">
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <ul id="answers"></ul>
-
     <script>
-function sayHello(){
-  alert("hello world");
-}
 
-function submitData(number){
+    // Exercise 1
 
-  var thing1 = document.getElementById("thing1");
-  var thing2 = document.getElementById("thing2");
+    // Introduction functions
+    // These are fun simple examples to get started with
 
-  var content1 = thing1.value
-    var content2 = thing1.value
+    // This function says hello!
 
-    if (content1 == "" || content2 == ""){
-      alert("PUT SOMETHING IN BOTH BOXES!!!!");
-      return;
+    function sayHello(){
+      alert("hello world");
     }
 
-  thing1.value = "";
-  thing2.value = "";
+    // This function adds swag to any word!
 
-  var newItem = document.createElement("li");
-  var text;
+    function swagify(word){
+      alert(word + "swag");
+    }
 
-  if (number == 1){
-    text = document.createTextNode(content1);
-  } else {
-    text = document.createTextNode(content2);
+    // This boring function adds 
+    // two numbers to one another
+    function addTogether(x,y){
+      alert( x + y);
+    }
+
+    // myRapperName
+    // This function takes someone's name
+    // and turns them into a rapper
+
+  function myRapperName(favoriteNumber, name){
+
+    var firstNames = ["MC", "DJ", "Young", "Little", "Big", "Small",
+    "Big Money", "DollaBillz", "Money-in-the-bank", "Ace", "Bojangles",
+    "SlamDunk", "Lay up", "Hard-in-the-paint", "BallsoHard", "DollazforDayz",
+    "Chief", "Lil", "Biggie", "Captain", "Super-Duper-Uber", "Boss", "Fly-So-High",
+    "Born-the-Best", "#BeastMode", "Never-Quit", "Born-to-Win", "Put-the-Team-on-my-Back",
+    "Neva Quit", "Who-da-Best", "I-go-hard", "Rich Homie", "Better than Kendrick",
+    "M-m-m-maybach Music"]
+
+      var numberOfNames = firstNames.length
+      var randomNumber = Math.random() * 100
+      var firstNameIndex = randomNumber % numberOfNames
+
+      var prefixName = firstNames[firstNameIndex];
+
+    return prefixName + name;
   }
 
-  var winners = document.getElementById("answers");
-  newItem.appendChild(text);
-  winners.appendChild(newItem);
-}
+  // Exercise 2
+
+  // Change the color this function takes a color
+  // and changes the div text to that color
+
+  function changeTheColor(color){
+
+  }
+
+  // Exercise 3
+
+  // Who is better Kim or Taylor?
+
+  function whoIsBetter(){
+
+  }
+
     </script>
-
-
   </body>
 </html>
