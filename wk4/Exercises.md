@@ -8,7 +8,7 @@
 
     ```if (hungry) {console.log ("Feed me!");} else {console.log ("I'll eat later."});``` 
 *  What does this print `var location = "school"`
-    
+
     ```if (location == "home"){console.log ("go eat dinner")} else if (location == "party")  {console.log ("Milly Rock")} else { console.log ("go to sleep")};```
 
 ### More Boolean Fun!
@@ -21,7 +21,7 @@
 * Correct these statements. 
 
     ``` var waterIsWet = false; var upIsDown = true; var fireIsReallyCold = false```
-    
+
 * Let's build a function that can flip the value of booleans for us
 
     ``` function flipIt(booleanInput) { return !booleanInput }```
