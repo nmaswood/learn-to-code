@@ -52,14 +52,14 @@ body {
     box-sizing: border-box;
 }
 
-.exercise-outout {
+.exercise-output {
     margin-top: 20px;
 }
 
 .submit-it {
 }
 
-.hide {
+.hide{
     display: none;
 }
 
