@@ -25,3 +25,7 @@
 * Let's build a function that can flip the value of booleans for us
 
     ``` function flipIt(booleanInput) { return !booleanInput }```
+
+### Functions!
+
+Go to https://repl.it/Ch7T/8. 
