@@ -15,12 +15,12 @@
 
 * The not operator : `!` takes whatever boolean value and flips it.
 * `!true == false`, `!false == true`
-* To flip the value of a variale try this.
+* To flip the value of a variable try this.
 
     ```var theSkyIsBlue = false; theSkyIsBlue = !theSkyIsBlue ```
 * Correct these statements. 
 
-    ``` var waterIsWet = false; var upIsDown = true; var fireIsReallyCold = false```
+    ``` var waterIsWet = false; var upIsDown = true; var fireIsReallyCold = true```
 
 * Let's build a function that can flip the value of booleans for us
 
