@@ -14,7 +14,7 @@
 ### More Boolean Fun!
 
 * The not operator : `!` takes whatever boolean value and flips it.
-* `!true == false`, `!false == true`
+    ```!true == false`, `!false == true```
 * To flip the value of a variable try this.
 
     ```var theSkyIsBlue = false; theSkyIsBlue = !theSkyIsBlue ```
