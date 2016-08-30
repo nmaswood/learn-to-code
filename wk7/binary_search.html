@@ -5,12 +5,17 @@
     <meta charset="utf-8">
     <title></title>
 </head>
- 
+  
 <body id='main'>
 
-    <div id='title'>
+    <div id='title' class = 'overlay'>
         <div class="flex-center">
             <p id ='read'>Can you guess the secret number?</p>
+        </div>
+    </div>
+    <div id = 'directions' class = 'overlay'> 
+        <div class ='flex-center'>  
+            <p id ='directions-text'>Use the four buttons at the top to eliminate possible numbers. Click the split button and then click on a number to split the number line at that point.</p><br>
         </div>
     </div>
     <div id='outer-container' class='outer'>
@@ -22,37 +27,78 @@
     </div>
     <script>
         var init = {
-            'title': function() {
+            'title': function() { 
                 var title = document.getElementById('title');
+                var directions = document.getElementById('directions');
+                var layer = document.getElementById('outer-container');
+                
+                directions.setAttribute('style', 'display:none;')
                 title.onclick = function() {
-                    title.style = 'display:none;'
+                    title.style = 'display:none;' 
+                    if (state.first){
+                        directions.style = ''; 
+                        state.first = !state.first;
+                    }
+                } 
+            },
+            'directions' : function(){
+                var directions = document.getElementById('directions');
+                var line = document.getElementById('line');
+                
+                directions.onclick = function(){
+                    directions.style = 'display:none;'
+                    line.style.height = '650px'; 
                 }
             },
             'win': function(){
                 var title = document.getElementById('title');
                 var read = document.getElementById('read');
-                read.innerHTML = 'YOU WON WITH ' + state.guesses + ' GUESSES !!!';
+                var directions = document.getElementById('directions-text');
+                read.innerHTML = 'YOU WON WITH ' + state.guesses; + ' GUESSES !!!';
+                directions.innerHTML = 'Is it possible to guess the number with less guesses? Can you without getting lucky, do it with fewer? Why or Why not?'
+
+                
                 title.style = '';
+                
+                state = generateState();
             }
         }
         init.title();
+        init.directions();
+
     </script>
 
     <style>
         #main {
             background: #2980b9;
         }
+        #directions{
+            font-size: 20px;
+        }
+          
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: #2980b9;
+            cursor: pointer; 
+            position: absolute; 
+            top: 0;
+            left: 0;
+        }
         
-        #title {
+        #title { 
+            font-size: 62px;
             width: 100%;
             height: 100%;
             background: #2980b9;
             cursor: pointer;
             position: absolute;
             top: 0;
+            text-transform: uppercase;
             left: 0;
         }
         
+
         .flex-center {
             background: #2980b9;
             display: flex;
@@ -62,11 +108,9 @@
             overflow: auto;
             color: #ffffff;
             font-family: 'Raleway', sans-serif;
-            font-size: 62px;
             font-weight: 800;
             margin: 0 0 24px;
             text-align: center;
-            text-transform: uppercase;
         }
         
         .big-text {
@@ -78,8 +122,8 @@
         }
         
         .flex-center p {
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 10%;
+            margin-right: 10%;
             margin-top: 20%;
             margin-bottom: 50%;
         }
@@ -135,7 +179,7 @@
         }
         
         #line {
-            height: 650px;
+            height: 0px;
             width: 95%;
         }
         
@@ -297,8 +341,10 @@
         };
     </script>
     <script>
-        var state = (function() {
+        
+        function generateState(){
             return {
+                'first': true,
                 'selected': 1,
                 'greater': false,
                 'secret': (function(){return Math.round(Math.random(101) * 100)})(),
@@ -307,7 +353,8 @@
                     return i;
                 }).slice(1, INIT_SIZE_OF_ARRAY + 1)
             };
-        })();
+        }
+        var state = generateState();
 
         var update = {
 
